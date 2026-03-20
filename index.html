@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>RAU Security System</title>
+    <style>
+        html, body { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            background: #000; overflow: hidden; display: flex; 
+            justify-content: center; align-items: flex-start;
+        }
+        /* ALTURA FORÇADA PARA 550PX */
+        #secure-container { 
+            width: 440px; 
+            height: 550px; 
+            position: relative;
+            overflow: hidden;
+        }
+        iframe { 
+            border: none; 
+            width: 440px; 
+            height: 550px; 
+            display: block;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false" onkeydown="return false">
+    <div id="secure-container"></div>
+    <script>
+        const _0xRAU = "aHR0cHM6Ly9nbG9ib3JhdS5jYXJsb3MyMDIyeWVzLndvcmtlcnMuZGV2Lw==";
+        (function() {
+            try {
+                const _target = atob(_0xRAU);
+                const _frame = document.createElement('iframe');
+                _frame.src = _target;
+                _frame.setAttribute('allow', 'autoplay; fullscreen');
+                _frame.setAttribute('scrolling', 'no');
+                document.getElementById('secure-container').appendChild(_frame);
+            } catch(e) {
+                document.body.innerHTML = "Access Denied";
+            }
+        })();
+    </script>
+</body>
+</html>
